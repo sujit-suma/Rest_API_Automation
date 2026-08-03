@@ -1,0 +1,6 @@
+.venv/
+reports/
+.idea/
+tests/__pycache__/
+config/__pycache__/
+api/__pycache__/

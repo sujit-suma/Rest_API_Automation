@@ -27,20 +27,19 @@ jobs:
         with:
           python-version: '3.12.10'
 
-      - name: Install Dependecies
+      - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Install Playwright
         run: |
-          playwright install --with-deps
+          playwright install
         
       - name: Run Playwright API Tests
         run: |
           pytest -v
 
-      - # Upload test reports
       - name: Upload pytest report
         if: always()
         uses: actions/upload-artifact@v4
